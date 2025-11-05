@@ -51,8 +51,8 @@ int tworzenieLini(SDL_Renderer* renderWFunkcji, int pX,int pY,int kX,int kY)
 }
 
 
-int poczatekX = 10;
-int poczatekY = 10;
+int poczatekX = 45;
+int poczatekY = 20;
 
 int wysokoscY = 50;
 int szerokoscX = 50;
@@ -107,16 +107,20 @@ int main() {
             }
             if (meowEvent.type == SDL_KEYDOWN) {
                 if (meowEvent.key.keysym.sym == SDLK_a) {
-                    katX--;
+                    katX = katX - 2;
+                    poczatekX++;
                 }
                 else if (meowEvent.key.keysym.sym == SDLK_d) {
-                    katX++;
+                    katX = katX + 2;
+                    poczatekX--;
                 }
                 else if (meowEvent.key.keysym.sym == SDLK_s) {
-                    katY--;
+                    katY = katY - 2;
+                    poczatekY++;
                 }
                 else if (meowEvent.key.keysym.sym == SDLK_w) {
-                    katY++;
+                    katY = katY + 2;
+                    poczatekY--;
                 }
                 else if (meowEvent.key.keysym.sym == SDLK_LEFT) {
                     szerokoscX--;
@@ -129,6 +133,7 @@ int main() {
                 }
                 else if (meowEvent.key.keysym.sym == SDLK_DOWN) {
                     wysokoscY++;
+
                 }
             }
         }
