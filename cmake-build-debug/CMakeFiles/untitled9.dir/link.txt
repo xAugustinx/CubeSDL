@@ -1,0 +1,1 @@
+/usr/bin/gcc -g -Wl,--dependency-file=CMakeFiles/untitled9.dir/link.d CMakeFiles/untitled9.dir/main.c.o -o untitled9  /usr/lib/libSDL2main.a /usr/lib/libSDL2-2.0.so.0.3200.58 -lm
